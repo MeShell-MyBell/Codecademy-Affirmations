@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(to bottom, #FFEB3B, #03A9F4); /* Yellow to blue gradient */
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #FF9800; /* Sunshine orange */
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+    color: #4CAF50; /* Flower green */
+}
+
+button {
+    background-color: #03A9F4; /* Blue */
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0288D1; /* Darker blue */
+}
