@@ -1,32 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(to bottom, #FFEB3B, #03A9F4); /* Yellow to blue gradient */
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
     font-family: Arial, sans-serif;
-    color: #333;
-    text-align: center;
+    background: linear-gradient(135deg, #dff5e1, #b8e0c2);
+    color: #4a4458;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 20px;
 }
 
+.app {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heart {
+    font-size: 4rem;
+    color: #d889a5;
+    margin-bottom: 5px;
+}
+
 h1 {
-    color: #FF9800; /* Sunshine orange */
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    margin: 0;
+    color: #65558f;
 }
 
-p {
-    font-size: 1.5em;
-    color: #4CAF50; /* Flower green */
+.subtitle {
+    font-size: 1.2rem;
+    margin: 10px 0 30px;
 }
 
-button {
-    background-color: #03A9F4; /* Blue */
-    color: #FFF;
+.affirmation-card {
+    background: white;
+    padding: 45px 35px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    margin-bottom: 30px;
+}
+
+#affirmation {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+#get-affirmation {
+    background: #8e7cc3;
+    color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 5px;
+    padding: 16px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
-button:hover {
-    background-color: #0288D1; /* Darker blue */
+#get-affirmation:hover {
+    background: #7563aa;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#get-affirmation:active {
+    transform: translateY(0);
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+
+    .hearts {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .hearts span {
+        font-size: 2rem;
+        color: #d66b8c;
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    .hearts span:nth-child(2) {
+        font-size: 3rem;
+        animation-delay: 0.4s;
+    }
+    
+    .hearts span:nth-child(3) {
+        animation-delay: 0.8s;
+    }
+    
+    .hearts span:nth-child(4) {
+        font-size: 2.5rem;
+        animation-delay: 1.2s;
+    }
+    
+    .hearts span:nth-child(5) {
+        animation-delay: 1.6s;
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+    
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+}
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .affirmation-card {
+        padding: 30px 20px;
+    }
+
+    #affirmation {
+        font-size: 1.3rem;
+    }
+
+    #get-affirmation {
+        font-size: 1rem;
+        padding: 14px 24px;
+    }
 }
